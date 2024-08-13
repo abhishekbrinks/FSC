@@ -1,0 +1,36 @@
+﻿<Window x:Class="FullScreenClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Full Screen WPF Clock" WindowState="Maximized" WindowStyle="None"  MouseDown="Window_MouseDown"
+        MouseMove="Window_MouseMove"
+        MouseUp="Window_MouseUp" MouseEnter="Window_MouseEnter" MouseDoubleClick="Button_Click">
+    <Grid Background="Black" ShowGridLines="True">
+        <!-- Your clock display elements here -->
+
+        <!-- Custom buttons -->
+        <StackPanel Orientation="Horizontal" Width="100px" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button Content="_" Width="30" Height="30" Background="#333" Foreground="White"
+                    Click="MinimizeButton_Click" />
+            <Button Content="□" Width="30" Height="30" Background="#333" Foreground="Yellow"
+                    Click="Button_Click" />
+            <Button Content="X" Width="30" Height="30" Background="#333" Foreground="Red"
+                    Click="Button_Click_1" />
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="myLabel" Content="Current Time" FontSize="400" FontFamily="Consolas" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Brown" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="myLabel2" Content="01 01 0001" FontSize="40" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="MintCream" />
+                <Separator Width="20" Background="Transparent"></Separator>
+                <Label x:Name="myLabel3" Content="-1" FontSize="40" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="MintCream" />
+                <Separator Width="20" Background="Transparent"></Separator>
+                <Label x:Name="myLabel4" Content="-1" FontSize="40" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="MintCream" />
+                <Separator Width="20" Background="Transparent"></Separator>
+                <Label x:Name="myLabel5" Content="-1" FontSize="40" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="MintCream" />
+                <Separator Width="20" Background="Transparent"></Separator>
+                <Label x:Name="myLabel6" Content="-1" FontSize="40" FontFamily="Consolas" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="MintCream" />
+                </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
